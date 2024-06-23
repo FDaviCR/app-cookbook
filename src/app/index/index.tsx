@@ -5,7 +5,9 @@ import { styles } from "./styles";
 export default function Index(){
     return(
         <View style={styles.container}>
-            <Text> Hello world! </Text>
+            <Text style={styles.title}>Escolha os produtos </Text>
+
+            <Text style={styles.subtitle}>Descubra receitas </Text>
         </View>
     )
 }
