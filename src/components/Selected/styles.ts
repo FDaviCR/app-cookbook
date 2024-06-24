@@ -3,7 +3,9 @@ import { theme } from "@/theme";
 
 export const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        padding: 24,
-    },
+        flexWrap: "wrap",
+        flexDirection: "row",
+        paddingBottom: 200,
+        gap: 12,
+    }
 });
