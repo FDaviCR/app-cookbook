@@ -3,6 +3,7 @@ import { View, Text, ScrollView } from "react-native";
 import { styles } from "./styles";
 import Ingredient from "@/components/Ingredient";
 import { useState } from "react";
+import Selected from "@/components/Selected";
 
 export default function Index(){
     const [selected, setSelected] = useState<string[]>([]);
@@ -14,6 +15,10 @@ export default function Index(){
 
         setSelected((state)=> [...state, value])
         console.log(selected);
+    }
+
+    function handleSelected(){
+        setSelected([]);
     }
 
     return(
@@ -40,6 +45,12 @@ export default function Index(){
                     ))
                 }
             </ScrollView>
+
+            <Selected 
+                quantity={selected.length} 
+                onClear={handleSelected} 
+                onSearch={()=>{}}
+            />
         </View>
     )
 }
